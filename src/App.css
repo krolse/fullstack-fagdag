@@ -39,5 +39,23 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10%;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #282c34;
+}
+
+.wrapper {
+  border: 2px solid white;
+  color: white;
+  background-color: #282c34;
+  margin: 2%;
+}
+
+svg {
+  max-width: 150px;
 }

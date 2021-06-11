@@ -17,8 +17,7 @@ function App() {
       <main>
         <div className="grid">
           {data.map(r => 
-          <Restaurant name={r.navn} score={r.total_karakter} location={r.poststed} key={r.tilsynsobjektid} />)}
-          {/* <Restaurant name="" score="" location="" /> */}
+          <Restaurant name={r.navn} grade={r.total_karakter} location={r.poststed} key={r.tilsynsobjektid} />)}
         </div>
       </main>
     </div>
