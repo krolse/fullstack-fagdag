@@ -6,12 +6,14 @@ import { ReactComponent as SurSmiley } from '../icons/smil_sur.svg';
 function Restaurant(props) {
     return(
         <div className="wrapper">
+            <a href={`https://google.com/search?q=${props.name}+${props.location}`} target="_blank">
             <h3>{props.name}</h3>
             <p>{`Location: ${props.location}`}</p>
             <p>{`Score: ${props.grade}`}</p>
             <div className="svg-wrapper">
                 {getIcon(props.grade)}
             </div>
+            </a>
         </div>
 
     );
