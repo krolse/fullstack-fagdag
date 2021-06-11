@@ -1,9 +1,6 @@
 export const getData = async () => {
-    return await fetch("https://hotell.difi.no/api/json/mattilsynet/smilefjes/tilsyn?")
-    .then(response => response.json())
-    .then(json => filterData(json.entries));
-}
+    return await fetch("https://fullstack-fagdag-backend.herokuapp.com/resautrant")
+    .then(response => response.json());
 
-const filterData = (json) => {
-    return json.filter(j => j.total_karakter !== "0" && j.total_karakter !== "1");
+    
 }
