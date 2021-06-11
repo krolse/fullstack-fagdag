@@ -5,15 +5,20 @@ import Restaurant from './components/Restaurant';
 
 function App() {
   const [data, setData] = useState([]);
+  const [loc, setLoc] = useState("");
   useEffect( () => {
-    const res = getData()
-    res.then(value => setData(value))
+    fetchData();
   }, [])
-  
-  console.log(data);
 
+  const fetchData = (location) => {
+    const res = location ? getData(location) : getData();
+    res.then(value => setData(value))
+  }
+  
   return (
     <div className="App">
+      <input type="text" className="inputSted" onChange={(e) => setLoc(e.target.value)}/>
+      <button type="button" onClick={fetchData}>Søk</button>
       <main>
         <div className="grid">
           {data.map(r => 

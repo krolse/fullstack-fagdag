@@ -1,4 +1,4 @@
-export const getData = async () => {
-    return await fetch("https://fullstack-fagdag-backend.herokuapp.com/restaurant")
+export const getData = async (sted) => {
+    return await fetch(`https://fullstack-fagdag-backend.herokuapp.com/restaurant?poststed=${sted}`)
     .then(response => response.json());
 }
