@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <input type="text" className="inputSted" onChange={(e) => setLoc(e.target.value)}/>
-      <button type="button" onClick={fetchData}>Søk</button>
+      <button type="button" onClick={() => fetchData(loc)}>Søk</button>
       <main>
         <div className="grid">
           {data.map(r => 
