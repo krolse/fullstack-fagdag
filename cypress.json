@@ -1,4 +1,4 @@
 {
     "baseUrl": "https://fullstack-fagdag-backend.herokuapp.com",
-    "watchForFileChanges": false
+    "watchForFileChanges": true
 }
